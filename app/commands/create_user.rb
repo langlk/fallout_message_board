@@ -13,5 +13,8 @@ class CreateUser
       url: "http://localhost:3001/api/v1/users?name=#{@name}&email=#{@email}&password=#{@password}"
     )
     result = JSON.parse(response)
+  rescue RestClient::UnprocessableEntity => exception
+    errors.add(:message, "API user could not be created.")
+    nil
   end
 end

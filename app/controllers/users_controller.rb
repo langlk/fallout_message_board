@@ -14,7 +14,7 @@ class UsersController < ApplicationController
         flash[:notice] = "Account created successfully!"
         redirect_to root_path
       else
-        flash[:alert] = "API authentication failed!"
+        flash[:alert] = auth_command.errors[:message]
         redirect_to '/signin'
       end
     else
