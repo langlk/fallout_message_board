@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3001/api/v1/users?email=&key=<api_key>&name=&password=password
+    uri: http://localhost:3001/api/v1/users?email=an%20arbitrary%20value&name=&password=password
     body:
       encoding: UTF-8
       string: ''
@@ -25,17 +25,53 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - cde688e5-7aa8-449c-9e4d-eb44aa6aeebe
+      - 9844fb9b-89c8-4ce6-8dfb-b804c83ac769
       X-Runtime:
-      - '0.064502'
+      - '0.062879'
       Vary:
       - Origin
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"Validation failed: Name can''t be blank, Email can''t be
-        blank"}'
+      string: '{"message":"Validation failed: Name can''t be blank"}'
     http_version: 
-  recorded_at: Wed, 13 Dec 2017 19:29:52 GMT
+  recorded_at: Wed, 13 Dec 2017 23:03:25 GMT
+- request:
+    method: post
+    uri: http://localhost:3001/api/v1/users?email=AN%20ARBITRARY%20VALUE&name=&password=password
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin15.6.0 x86_64) ruby/2.4.1p111
+      Host:
+      - localhost:3001
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - '07795da2-1173-430d-bf55-551eea9978d6'
+      X-Runtime:
+      - '0.062019'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Validation failed: Name can''t be blank"}'
+    http_version: 
+  recorded_at: Wed, 13 Dec 2017 23:03:25 GMT
 recorded_with: VCR 4.0.0
