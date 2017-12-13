@@ -43,17 +43,21 @@
         </div>
       <% end %>
     </div>
+
     <div class="grid-container">
       <div class="grid-x grid-padding-x">
-        <div class="cell">
+        <div class="cell notifications" data-closable>
           <% if flash[:notice] != nil %>
-            <div class="card-panel light-blue accent-2">
-              <%= flash[:notice] %>
+            <div class="callout primary">
+              <p><%= flash[:notice] %></p>
+              <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
           <% end %>
 
           <% if flash[:alert] != nil %>
-            <div class="card-panel orange accent-2">
+            <div class="callout alert" data-closable>
               <% if flash[:alert].class == Array %>
                 <p><strong>Something went wrong!</strong></p>
                 <ul>
