@@ -14,5 +14,11 @@ class PostMessage
       headers: { Authorization: @user_token }
     )
     result = JSON.parse(response)
+  rescue RestClient::UnprocessableEntity => exception
+    errors.add(:message, "Content cannot be blank.")
+    nil
+  rescue RestClient::Unauthorized => execute
+    errors.add(:message, "User authorization failed.")
+    nil
   end
 end
