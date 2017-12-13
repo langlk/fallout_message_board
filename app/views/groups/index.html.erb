@@ -1,0 +1,9 @@
+<h1>All Groups</h1>
+
+<% if @groups.any? %>
+  <% @groups.each do |group| %>
+    <div id="group-<%= group['id'] %>">
+      <h3><%= link_to group['name'], "/groups/#{group['id']}" %></h3>
+    </div>
+  <% end %>
+<% end %>

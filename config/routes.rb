@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post '/sessions' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
 
-  resources :groups do
-    resources :messages
+  resources :groups, only: [:index, :show] do
+    resources :messages, except: [:index, :show]
   end
 end
