@@ -2,24 +2,30 @@
 
 <p><%= @group['description'] %></p>
 
+<hr>
+
 <h3>Discussion</h3>
 <% if @messages.any? %>
   <% @messages.each do |message| %>
     <% if message['id'] == @edit_message_id %>
       <%= render 'messages/edit', message_content: message['content'] %>
     <% else %>
-      <div id="message-<%= message['id'] %>">
-        <h5><%= message['username'] %></h5>
-        <p><%= message['content'] %></p>
-        <% if current_user && (current_user.name == message['username']) %>
-          <p>
-            <%= link_to "Edit", "/groups/#{@group['id']}/messages/#{message['id']}/edit" %> |
-            <%= link_to "Delete", "/groups/#{@group['id']}/messages/#{message['id']}/", data: {
-              confirm: "This will permanently delete this message. Are you sure?",
-              method: "delete"
-              } %>
-          </p>
-        <% end %>
+      <div class="card" id="message-<%= message['id'] %>">
+        <div class="card-divider message-header">
+          <h5><%= message['username'] %></h5>
+          <% if current_user && (current_user.name == message['username']) %>
+            <p>
+              <%= link_to "Edit", "/groups/#{@group['id']}/messages/#{message['id']}/edit" %> |
+              <%= link_to "Delete", "/groups/#{@group['id']}/messages/#{message['id']}/", data: {
+                confirm: "This will permanently delete this message. Are you sure?",
+                method: "delete"
+                } %>
+            </p>
+          <% end %>
+        </div>
+        <div class="card-section">
+          <p><%= message['content'] %></p>
+        </div>
       </div>
     <% end %>
   <% end %>
@@ -27,4 +33,6 @@
   <h4>No messages found for this group.</h4>
 <% end %>
 
-<%= render 'messages/new' %>
+<% if current_user %>
+  <%= render 'messages/new' %>
+<% end %>
