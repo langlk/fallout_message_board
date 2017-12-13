@@ -1,3 +1,14 @@
 <h1><%= @group['name'] %></h1>
 
 <p><%= @group['description'] %></p>
+
+<h3>Discussion</h3>
+<% if @messages.any? %>
+  <% @messages.each do |message| %>
+    <div id="message-<%= message['id'] %>">
+      <p><%= message['content'] %></p>
+    </div>
+  <% end %>
+<% else %>
+  <h4>No messages found for this group.</h4>
+<% end %>
