@@ -22,6 +22,7 @@
 
 .contents {
   margin-top: 1em;
+  margin-bottom: 3em;
 }
 
 .user-form-container {
@@ -29,7 +30,7 @@
   justify-content: center;
 }
 
-.user-form-links {
+.form-options {
   display: flex;
   align-items: baseline;
 }
@@ -46,4 +47,8 @@ a > .card:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.cancel-update-button {
+  margin-right: .5em;
 }

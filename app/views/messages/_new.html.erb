@@ -1,9 +1,12 @@
 <h3>Post a Message</h3>
 
 <%= form_tag "/groups/#{@group['id']}/messages" do %>
-  <div class="input-field">
-    <%= label_tag :content %>
-    <%= text_area_tag :content %>
+  <div class="row">
+    <div class="small-12 cloumns">
+      <label>
+        <%= text_area_tag :content %>
+      </label>
+      <%= submit_tag "Post", class: "button" %>
+    </div>
   </div>
-  <%= submit_tag "Post" %>
 <% end %>
