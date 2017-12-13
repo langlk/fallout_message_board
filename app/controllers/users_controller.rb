@@ -7,8 +7,16 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:notice] = "Account created successfully!"
-      redirect_to root_path
+      session[:user_id] = @user.id
+      auth_command = AuthorizeUser.call(@user.email, @user.password)
+      if auth_command.success?
+        session[:token] = auth_command.result['auth_token']
+        flash[:notice] = "Account created successfully!"
+        redirect_to root_path
+      else
+        flash[:alert] = "API authentication failed!"
+        redirect_to '/signin'
+      end
     else
       flash[:alert] = @user.errors.full_messages
       render :new

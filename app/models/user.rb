@@ -5,7 +5,7 @@ class User < ApplicationRecord
   before_save :create_api_user
 
   def create_api_user
-    command = CreateUser.call(name, email, password)
+    command = CreateUser.call(email, name, password)
     if command.success?
       puts "API User created successfully with key #{command.result['key']}"
     else
