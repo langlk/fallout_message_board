@@ -14,6 +14,9 @@ class PostMessage
       headers: { Authorization: @user_token }
     )
     result = JSON.parse(response)
+  rescue RestClient::NotFound => exception
+    errors.add(:message, "Group could not be found.")
+    nil
   rescue RestClient::UnprocessableEntity => exception
     errors.add(:message, "Content cannot be blank.")
     nil
