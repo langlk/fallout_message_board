@@ -9,8 +9,9 @@
       <%= render 'messages/edit', message_content: message['content'] %>
     <% else %>
       <div id="message-<%= message['id'] %>">
+        <h5><%= message['username'] %></h5>
         <p><%= message['content'] %></p>
-        <% if current_user %>
+        <% if current_user && (current_user.name == message['username']) %>
           <p>
             <%= link_to "Edit", "/groups/#{@group['id']}/messages/#{message['id']}/edit" %> |
             <%= link_to "Delete", "/groups/#{@group['id']}/messages/#{message['id']}/", data: {

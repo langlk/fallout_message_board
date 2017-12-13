@@ -10,7 +10,7 @@ class CreateUser
   def call
     response = RestClient::Request.execute(
       method: :post,
-      url: "http://localhost:3001/api/v1/users?key=#{ENV['API_KEY']}&name=#{@name}&email=#{@email}&password=#{@password}"
+      url: "http://localhost:3001/api/v1/users?name=#{@name}&email=#{@email}&password=#{@password}"
     )
     result = JSON.parse(response)
   end
