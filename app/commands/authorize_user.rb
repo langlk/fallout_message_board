@@ -12,5 +12,8 @@ class AuthorizeUser
       url: "http://localhost:3001/api/v1/authenticate?key=#{ENV['API_KEY']}&email=#{@email}&password=#{@password}"
     )
     result = JSON.parse(response)
+  rescue RestClient::Unauthorized => exception
+    errors.add(:message, "Error authenticating API user.")
+    nil
   end
 end

@@ -68,6 +68,9 @@
               <% else %>
                 <%= flash[:alert] %>
               <% end %>
+              <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
           <% end %>
         </div>

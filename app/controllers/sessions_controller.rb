@@ -12,11 +12,11 @@ class SessionsController < ApplicationController
         flash[:notice] = "Welcome back, #{user.name}!"
         redirect_to root_path
       else
-        flash[:alert] = "API authentication failed!"
+        flash[:alert] = auth_command.errors[:message]
         redirect_to '/signin'
       end
     else
-      flash[:alert] = user.errors.full_messages
+      flash[:alert] = "Incorrect email or password."
       render :new
     end
   end
