@@ -1,3 +1,9 @@
 <h3>Post a Message</h3>
 
-<%= render 'messages/form' %>
+<%= form_tag "/groups/#{@group['id']}/messages" do %>
+  <div class="input-field">
+    <%= label_tag :content %>
+    <%= text_area_tag :content %>
+  </div>
+  <%= submit_tag "Post" %>
+<% end %>

@@ -5,9 +5,14 @@
 <h3>Discussion</h3>
 <% if @messages.any? %>
   <% @messages.each do |message| %>
-    <div id="message-<%= message['id'] %>">
-      <p><%= message['content'] %></p>
-    </div>
+    <% if message['id'] == @edit_message_id %>
+      <%= render 'messages/edit', message_content: message['content'] %>
+    <% else %>
+      <div id="message-<%= message['id'] %>">
+        <p><%= message['content'] %></p>
+        <p><%= link_to "Edit", "/groups/#{@group['id']}/messages/#{message['id']}/edit" %></p>
+      </div>
+    <% end %>
   <% end %>
 <% else %>
   <h4>No messages found for this group.</h4>

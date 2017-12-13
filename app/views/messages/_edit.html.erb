@@ -1,3 +1,12 @@
 <h3>Edit Message</h3>
 
-<%= render 'messages/form' %>
+<%= form_tag "/groups/#{@group['id']}/messages/#{@edit_message_id}", method: "patch" do %>
+  <div class="input-field">
+    <%= label_tag :content %>
+    <%= text_area_tag :content, nil, placeholder: message_content %>
+  </div>
+  <%= submit_tag "Post" %>
+<% end %>
+<%= link_to "/groups/#{@group['id']}" do %>
+  <button type="button" name="button">Cancel</button>
+<% end %>
