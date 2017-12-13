@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3001/api/v1/users?email=new@vegas.com&name=ED-E&password=newvegas
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin15.6.0 x86_64) ruby/2.4.1p111
+      Host:
+      - localhost:3001
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8ad4e231330417a3f265252f15513451"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 41b4798a-01fa-41fe-80a2-62b006ab5938
+      X-Runtime:
+      - '0.101591'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"User created successfully.","name":"ED-E","email":"new@vegas.com","key":"26d543b2a9bdfc2ce366f5f20099692a"}'
+    http_version: 
+  recorded_at: Wed, 13 Dec 2017 23:50:33 GMT
+- request:
+    method: post
+    uri: http://localhost:3001/api/v1/authenticate?email=new@vegas.com&key=<api_key>&password=newvegas
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin15.6.0 x86_64) ruby/2.4.1p111
+      Host:
+      - localhost:3001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3d8c4363bf9dac2ff89147e55a00f55f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c660b84a-93f2-4782-85f9-931e5ca2ee33
+      X-Runtime:
+      - '0.149893'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"auth_token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNzcsImV4cCI6MTUxMzI5NTQzNH0.D01goMkp9SXnixadMnILvjNZSIdNR1zBVnJpW07lpT4"}'
+    http_version: 
+  recorded_at: Wed, 13 Dec 2017 23:50:34 GMT
+recorded_with: VCR 4.0.0
