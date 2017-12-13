@@ -9,6 +9,26 @@
   </head>
 
   <body>
+    <% if flash[:notice] != nil %>
+      <div class="card-panel light-blue accent-2">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+    <% if flash[:alert] != nil %>
+      <div class="card-panel orange accent-2">
+        <% if flash[:alert].class == Array %>
+          <p><strong>Something went wrong!</strong></p>
+          <ul>
+            <% flash[:alert].each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        <% else %>
+          <%= flash[:alert] %>
+        <% end %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
