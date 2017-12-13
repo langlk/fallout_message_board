@@ -41,4 +41,15 @@ class MessagesController < ApplicationController
       redirect_to groups_path
     end
   end
+
+  def destroy
+    message_command = DeleteMessage.call(params[:group_id], params[:id], session[:token])
+    if message_command.success?
+      flash[:notice] = "Message deleted successfully."
+      redirect_to "/groups/#{params[:group_id]}"
+    else
+      flash[:alert] = message_command.errors[:message]
+      redirect_to groups_path
+    end
+  end
 end

@@ -10,7 +10,15 @@
     <% else %>
       <div id="message-<%= message['id'] %>">
         <p><%= message['content'] %></p>
-        <p><%= link_to "Edit", "/groups/#{@group['id']}/messages/#{message['id']}/edit" %></p>
+        <% if current_user %>
+          <p>
+            <%= link_to "Edit", "/groups/#{@group['id']}/messages/#{message['id']}/edit" %> |
+            <%= link_to "Delete", "/groups/#{@group['id']}/messages/#{message['id']}/", data: {
+              confirm: "This will permanently delete this message. Are you sure?",
+              method: "delete"
+              } %>
+          </p>
+        <% end %>
       </div>
     <% end %>
   <% end %>
