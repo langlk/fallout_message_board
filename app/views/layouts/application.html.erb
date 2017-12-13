@@ -1,34 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>FalloutMessageBoard</title>
-    <%= csrf_meta_tags %>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <% if flash[:notice] != nil %>
-      <div class="card-panel light-blue accent-2">
-        <%= flash[:notice] %>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">Wasteland Message Boards</li>
+          <li><%= link_to "Groups", groups_path %></li>
+        </ul>
       </div>
-    <% end %>
-
-    <% if flash[:alert] != nil %>
-      <div class="card-panel orange accent-2">
-        <% if flash[:alert].class == Array %>
-          <p><strong>Something went wrong!</strong></p>
-          <ul>
-            <% flash[:alert].each do |message| %>
-              <li><%= message %></li>
-            <% end %>
+      <% if current_user %>
+        <div class="top-bar-right">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="has-submenu">
+              <%= link_to "#{current_user.name} (#{current_user.email})", '#0' %>
+              <ul class="submenu menu vertical" data-submenu>
+                <li><%= link_to "Sign Out", '/signout'%></li>
+              </ul>
+            </li>
           </ul>
-        <% else %>
-          <%= flash[:alert] %>
-        <% end %>
+        </div>
+      <% else %>
+        <div class="top-bar-right">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="has-submenu">
+              <%= link_to "Sign In", '/signin' %>
+              <ul class="submenu menu vertical" data-submenu>
+                <li><%= link_to "Sign Up", '/signup'%></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="cell">
+          <% if flash[:notice] != nil %>
+            <div class="card-panel light-blue accent-2">
+              <%= flash[:notice] %>
+            </div>
+          <% end %>
+
+          <% if flash[:alert] != nil %>
+            <div class="card-panel orange accent-2">
+              <% if flash[:alert].class == Array %>
+                <p><strong>Something went wrong!</strong></p>
+                <ul>
+                  <% flash[:alert].each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              <% else %>
+                <%= flash[:alert] %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+        <div class="cell contents">
+          <%= yield %>
+        </div>
       </div>
-    <% end %>
-    <%= yield %>
+    </div>
   </body>
 </html>

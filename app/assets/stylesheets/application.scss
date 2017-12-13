@@ -12,4 +12,24 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+
+.contents {
+  margin-top: 1em;
+}
+
+.user-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.user-form-links {
+  display: flex;
+  align-items: baseline;
+}
+
+.user-form-link {
+  margin-left: .5em;
+}

@@ -1,21 +1,28 @@
-<h1>Sign up</h1>
+<div class="user-form-container">
+  <div class="user-form">
+    <h1>Sign up</h1>
+    <%= form_for :user, url: '/users' do |f| %>
+      <label>
+        Name
+        <%= f.text_field :name %>
+      </label>
+      <label>
+        Email
+        <%= f.email_field :email %>
+      </label>
+      <label>
+        Password
+        <%= f.password_field :password %>
+      </label>
+      <label>
+        Password Confirmation
+        <%= f.password_field :password_confirmation %>
+      </label>
+      <div class="user-form-links">
+        <%= f.submit "Sign Up", class: "button", id: "new_user_button" %>
+        <%= link_to "Sign In", '/signin', class: "user-form-link" %>
+      </div>
 
-<%= form_for :user, url: '/users' do |f| %>
-  <div class="input-field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <% end %>
   </div>
-  <div class="input-field">
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </div>
-  <div class="input-field">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div class="input-field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <%= f.submit "Sign up", class: "waves-effect waves-light btn", id: "new_user_button" %>
-<% end %>
+</div>
