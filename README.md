@@ -35,6 +35,7 @@ To install on your own machine, follow the instructions below:
   bundle update
   rake db:setup
   rails db:seed
+  yarn add jquery
   rails s
   ```
 * Open ```localhost:3000``` in your web browser
