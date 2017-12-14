@@ -33,6 +33,6 @@
   <h4>No messages found for this group.</h4>
 <% end %>
 
-<% if current_user %>
+<% if current_user && !@edit_message_id %>
   <%= render 'messages/new' %>
 <% end %>
