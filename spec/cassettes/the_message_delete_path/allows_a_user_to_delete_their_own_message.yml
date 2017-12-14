@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3001/api/v1/users?email=arcade1@fota.org&name=Arcade1&password=gannon
+    uri: http://localhost:3001/api/v1/users?email=arcade2@fota.org&name=Arcade2&password=gannon
     body:
       encoding: UTF-8
       string: ''
@@ -23,25 +23,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"5e45767eefec8b108e07c42194d784fc"
+      - W/"883e6f1081ec0c5895b7266d7f8d0d98"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 48532154-a5db-47a3-9589-75fcfe0efa60
+      - 3e24fd26-04c3-4099-8fdf-9d7c0992cc54
       X-Runtime:
-      - '0.066336'
+      - '0.064766'
       Vary:
       - Origin
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"User created successfully.","name":"Arcade1","email":"arcade1@fota.org","key":"2ba0f13b7b64a35f7e1b25f1fb78338e"}'
+      string: '{"message":"User created successfully.","name":"Arcade2","email":"arcade2@fota.org","key":"b5bb59ba7039f71c151cc924ca2aed84"}'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 - request:
     method: post
-    uri: http://localhost:3001/api/v1/authenticate?email=arcade1@fota.org&key=<api_key>&password=gannon
+    uri: http://localhost:3001/api/v1/authenticate?email=arcade2@fota.org&key=<api_key>&password=gannon
     body:
       encoding: UTF-8
       string: ''
@@ -62,22 +62,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"354a5ba7b2b35271dc40b86f93714f33"
+      - W/"7a2a1c24e6dd2ecbaa78a46c13cf8146"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 99657f33-586c-4c20-bb0d-954eae1ef7be
+      - f4dd190d-da87-45ef-aa4f-b4264346a5c4
       X-Runtime:
-      - '0.120141'
+      - '0.122183'
       Vary:
       - Origin
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"auth_token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOTgsImV4cCI6MTUxMzM2MTU5M30.OQuDEJaKGS30VoRP_FwA2WyHT-NI3qIAi6G_vmuifFg"}'
+      string: '{"auth_token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOTYsImV4cCI6MTUxMzM2MTU5Mn0.ikWhknjTd4praRaVzrezft_6N_94MY3FX5SwQ2Vb7Fk"}'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/groups?key=<api_key>
@@ -105,9 +105,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ae83def7-1909-4876-9475-3aaf16a662e1
+      - 47cfe25f-9736-46b6-8246-0e9c25eab896
       X-Runtime:
-      - '0.004593'
+      - '0.004716'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -132,7 +132,7 @@ http_interactions:
         red blood cells.","created_at":"2017-12-13T22:47:56.366Z","updated_at":"2017-12-13T22:47:56.366Z"},{"id":62,"name":"Caesar''s
         Legion","description":"Revised stratagem: Initiate photonic resonance overcharge.","created_at":"2017-12-13T22:47:56.386Z","updated_at":"2017-12-13T22:47:56.386Z"}]'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/groups/53/?key=<api_key>
@@ -160,9 +160,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 83d3c44f-944e-4e55-9fdd-9dfd5e438955
+      - 99ba015d-7cc7-4343-8dec-01df9fb07b03
       X-Runtime:
-      - '0.003275'
+      - '0.003688'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -172,7 +172,7 @@ http_interactions:
       string: '{"id":53,"name":"Talon Company","description":"I''m gonna run some
         diagnostics while you''re tinkering. Take your time.","created_at":"2017-12-13T22:47:56.204Z","updated_at":"2017-12-13T22:47:56.204Z"}'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/groups/53/messages?key=<api_key>
@@ -200,9 +200,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fa5f13f7-05a6-449c-981c-aebfdf538238
+      - d7ce29b7-b1a9-42cd-ae0d-f001961c1c2f
       X-Runtime:
-      - '0.006325'
+      - '0.005850'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -231,10 +231,10 @@ http_interactions:
         Graham"},{"id":633,"user_id":195,"group_id":53,"content":"This is a new test
         message.","created_at":"2017-12-14T18:13:12.140Z","updated_at":"2017-12-14T18:13:12.140Z","username":"Arcade"}]'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 - request:
     method: post
-    uri: http://localhost:3001/api/v1/groups/53/messages?content=This%20is%20a%20new%20test%20message.&key=<api_key>
+    uri: http://localhost:3001/api/v1/groups/53/messages?content=This%20is%20a%20test%20message%20for%20deletion.&key=<api_key>
     body:
       encoding: UTF-8
       string: ''
@@ -246,7 +246,7 @@ http_interactions:
       User-Agent:
       - rest-client/2.0.2 (darwin15.6.0 x86_64) ruby/2.4.1p111
       Authorization:
-      - eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOTgsImV4cCI6MTUxMzM2MTU5M30.OQuDEJaKGS30VoRP_FwA2WyHT-NI3qIAi6G_vmuifFg
+      - eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOTYsImV4cCI6MTUxMzM2MTU5Mn0.ikWhknjTd4praRaVzrezft_6N_94MY3FX5SwQ2Vb7Fk
       Host:
       - localhost:3001
   response:
@@ -257,23 +257,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a0d9bfb095b8038e01394de71712f61e"
+      - W/"dc76e3e50c76140769aaca30a8c64c4f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9de0a4f9-7f4a-4e11-9d40-c337ebad8c5d
+      - 99f03138-8340-4889-8f1f-e421bd5743d3
       X-Runtime:
-      - '0.008388'
+      - '0.008409'
       Vary:
       - Origin
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"id":635,"user_id":198,"group_id":53,"content":"This is a new test
-        message.","created_at":"2017-12-14T18:13:13.208Z","updated_at":"2017-12-14T18:13:13.208Z","username":"Arcade1"}'
+      string: '{"id":634,"user_id":196,"group_id":53,"content":"This is a test message
+        for deletion.","created_at":"2017-12-14T18:13:12.517Z","updated_at":"2017-12-14T18:13:12.517Z","username":"Arcade2"}'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/groups/53/?key=<api_key>
@@ -301,9 +301,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b026fbd1-87e4-4739-9c56-e40919543f41
+      - 39700099-d2b7-4c84-becd-acb785349e78
       X-Runtime:
-      - '0.003436'
+      - '0.002523'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -313,7 +313,7 @@ http_interactions:
       string: '{"id":53,"name":"Talon Company","description":"I''m gonna run some
         diagnostics while you''re tinkering. Take your time.","created_at":"2017-12-13T22:47:56.204Z","updated_at":"2017-12-13T22:47:56.204Z"}'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/groups/53/messages?key=<api_key>
@@ -337,13 +337,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d7bb8c95c87d6d25869f34c4ce865760"
+      - W/"8b1f197bd6c1b3a92069b08407ad3a99"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 30fc2fbc-80b6-4ec8-8db0-a050ecaa551b
+      - 3b79c8e7-ebbb-4850-8e46-6354429036e0
       X-Runtime:
-      - '0.005703'
+      - '0.005860'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -370,115 +370,15 @@ http_interactions:
         rumors from across the river indicate that a secret underground robot army
         has been destroyed before anyone had a chance to use it.","created_at":"2017-12-13T22:47:56.225Z","updated_at":"2017-12-13T22:47:56.225Z","username":"Joshua
         Graham"},{"id":633,"user_id":195,"group_id":53,"content":"This is a new test
-        message.","created_at":"2017-12-14T18:13:12.140Z","updated_at":"2017-12-14T18:13:12.140Z","username":"Arcade"},{"id":635,"user_id":198,"group_id":53,"content":"This
-        is a new test message.","created_at":"2017-12-14T18:13:13.208Z","updated_at":"2017-12-14T18:13:13.208Z","username":"Arcade1"}]'
+        message.","created_at":"2017-12-14T18:13:12.140Z","updated_at":"2017-12-14T18:13:12.140Z","username":"Arcade"},{"id":634,"user_id":196,"group_id":53,"content":"This
+        is a test message for deletion.","created_at":"2017-12-14T18:13:12.517Z","updated_at":"2017-12-14T18:13:12.517Z","username":"Arcade2"}]'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 - request:
-    method: get
-    uri: http://localhost:3001/api/v1/groups/53/?key=<api_key>
+    method: delete
+    uri: http://localhost:3001/api/v1/groups/53/messages/634/?key=<api_key>
     body:
       encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*"
-      Accept-Encoding:
-      - gzip, deflate
-      User-Agent:
-      - rest-client/2.0.2 (darwin15.6.0 x86_64) ruby/2.4.1p111
-      Host:
-      - localhost:3001
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"e2bf945ffef65f1070f60bc0199fc185"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 503e0c29-8a50-45c3-879f-895e2661aa3b
-      X-Runtime:
-      - '0.003432'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"id":53,"name":"Talon Company","description":"I''m gonna run some
-        diagnostics while you''re tinkering. Take your time.","created_at":"2017-12-13T22:47:56.204Z","updated_at":"2017-12-13T22:47:56.204Z"}'
-    http_version: 
-  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
-- request:
-    method: get
-    uri: http://localhost:3001/api/v1/groups/53/messages?key=<api_key>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*"
-      Accept-Encoding:
-      - gzip, deflate
-      User-Agent:
-      - rest-client/2.0.2 (darwin15.6.0 x86_64) ruby/2.4.1p111
-      Host:
-      - localhost:3001
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"d7bb8c95c87d6d25869f34c4ce865760"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - daca4dfa-b481-4132-ba25-d797a2971afb
-      X-Runtime:
-      - '0.006930'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '[{"id":520,"user_id":174,"group_id":53,"content":"The women of New
-        Vegas ask me a lot if there''s a Mrs. New Vegas. Well, of course there is.
-        You''re her. And you''re still as perfect as the day we met.","created_at":"2017-12-13T22:47:56.207Z","updated_at":"2017-12-13T22:47:56.207Z","username":"Codsworth"},{"id":521,"user_id":164,"group_id":53,"content":"Stimpaks
-        are a marvelous invention, don''t you think?","created_at":"2017-12-13T22:47:56.210Z","updated_at":"2017-12-13T22:47:56.210Z","username":"Lucas
-        Simms"},{"id":522,"user_id":172,"group_id":53,"content":"The women of New
-        Vegas ask me a lot if there''s a Mrs. New Vegas. Well, of course there is.
-        You''re her. And you''re still as perfect as the day we met.","created_at":"2017-12-13T22:47:56.212Z","updated_at":"2017-12-13T22:47:56.212Z","username":"Christine
-        Royce"},{"id":523,"user_id":173,"group_id":53,"content":"The past, the present,
-        and the future walked into a bar. It was tense.","created_at":"2017-12-13T22:47:56.214Z","updated_at":"2017-12-13T22:47:56.214Z","username":"Myron"},{"id":524,"user_id":167,"group_id":53,"content":"If
-        you want to see the fate of democracies, just look out the window","created_at":"2017-12-13T22:47:56.216Z","updated_at":"2017-12-13T22:47:56.216Z","username":"Leslie
-        Ann Bishop"},{"id":525,"user_id":167,"group_id":53,"content":"That means you''re,
-        erm... two centuries late for dinner! Perhaps I could whip you up a snack?
-        You must be famished!","created_at":"2017-12-13T22:47:56.217Z","updated_at":"2017-12-13T22:47:56.217Z","username":"Leslie
-        Ann Bishop"},{"id":526,"user_id":158,"group_id":53,"content":"Nothing to impede
-        progress. If you want to see the fate of democracies, look out the windows.","created_at":"2017-12-13T22:47:56.219Z","updated_at":"2017-12-13T22:47:56.219Z","username":"Paladin
-        Danse"},{"id":527,"user_id":161,"group_id":53,"content":"Ad Victoriam!","created_at":"2017-12-13T22:47:56.221Z","updated_at":"2017-12-13T22:47:56.221Z","username":"DiMA"},{"id":528,"user_id":162,"group_id":53,"content":"Sure.
-        Be glad to take...I mean hold some stuff for you.","created_at":"2017-12-13T22:47:56.223Z","updated_at":"2017-12-13T22:47:56.223Z","username":"Sulik"},{"id":529,"user_id":171,"group_id":53,"content":"Strange
-        rumors from across the river indicate that a secret underground robot army
-        has been destroyed before anyone had a chance to use it.","created_at":"2017-12-13T22:47:56.225Z","updated_at":"2017-12-13T22:47:56.225Z","username":"Joshua
-        Graham"},{"id":633,"user_id":195,"group_id":53,"content":"This is a new test
-        message.","created_at":"2017-12-14T18:13:12.140Z","updated_at":"2017-12-14T18:13:12.140Z","username":"Arcade"},{"id":635,"user_id":198,"group_id":53,"content":"This
-        is a new test message.","created_at":"2017-12-14T18:13:13.208Z","updated_at":"2017-12-14T18:13:13.208Z","username":"Arcade1"}]'
-    http_version: 
-  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
-- request:
-    method: patch
-    uri: http://localhost:3001/api/v1/groups/53/messages/635/?content=This%20is%20an%20update%20to%20the%20test%20message.&key=<api_key>
-    body:
-      encoding: UTF-8
       string: ''
     headers:
       Accept:
@@ -488,7 +388,7 @@ http_interactions:
       User-Agent:
       - rest-client/2.0.2 (darwin15.6.0 x86_64) ruby/2.4.1p111
       Authorization:
-      - eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOTgsImV4cCI6MTUxMzM2MTU5M30.OQuDEJaKGS30VoRP_FwA2WyHT-NI3qIAi6G_vmuifFg
+      - eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOTYsImV4cCI6MTUxMzM2MTU5Mn0.ikWhknjTd4praRaVzrezft_6N_94MY3FX5SwQ2Vb7Fk
       Host:
       - localhost:3001
   response:
@@ -499,22 +399,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"0918952168c34941bae4368e23c6d5c9"
+      - W/"af69ce117142a79558d3f19e2d0bde8d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 02e9a091-fd9c-4ed7-b82c-9bec9d3fa63f
+      - 075c27f9-7378-4889-9d0f-b9946536551a
       X-Runtime:
-      - '0.008929'
+      - '0.006992'
       Vary:
       - Origin
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"Your message has been updated successfully."}'
+      string: '{"message":"Your message has been deleted successfully."}'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/groups/53/?key=<api_key>
@@ -542,9 +442,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 373ebf59-8ec4-43eb-92bc-dbf966cb0c60
+      - 8354d1b8-f256-46dc-81b0-321ef9e5248b
       X-Runtime:
-      - '0.002591'
+      - '0.003039'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -554,7 +454,7 @@ http_interactions:
       string: '{"id":53,"name":"Talon Company","description":"I''m gonna run some
         diagnostics while you''re tinkering. Take your time.","created_at":"2017-12-13T22:47:56.204Z","updated_at":"2017-12-13T22:47:56.204Z"}'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/groups/53/messages?key=<api_key>
@@ -578,13 +478,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1feae5deb0c0c4262d33af059c22bbad"
+      - W/"bd6b945bebf887dfef196d5245da45bd"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 62864d4c-07c1-466e-8c19-b80c4cdc3197
+      - d2636c0a-9630-4fad-b7aa-2db3612bae89
       X-Runtime:
-      - '0.005306'
+      - '0.005334'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -611,8 +511,7 @@ http_interactions:
         rumors from across the river indicate that a secret underground robot army
         has been destroyed before anyone had a chance to use it.","created_at":"2017-12-13T22:47:56.225Z","updated_at":"2017-12-13T22:47:56.225Z","username":"Joshua
         Graham"},{"id":633,"user_id":195,"group_id":53,"content":"This is a new test
-        message.","created_at":"2017-12-14T18:13:12.140Z","updated_at":"2017-12-14T18:13:12.140Z","username":"Arcade"},{"id":635,"user_id":198,"group_id":53,"content":"This
-        is an update to the test message.","created_at":"2017-12-14T18:13:13.208Z","updated_at":"2017-12-14T18:13:13.281Z","username":"Arcade1"}]'
+        message.","created_at":"2017-12-14T18:13:12.140Z","updated_at":"2017-12-14T18:13:12.140Z","username":"Arcade"}]'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 recorded_with: VCR 4.0.0

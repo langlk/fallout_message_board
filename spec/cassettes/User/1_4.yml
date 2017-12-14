@@ -25,17 +25,17 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 1c230dae-6dd0-4a91-b97a-e42148f23034
+      - 9e8b9ea7-3d77-4094-ba96-3ee31113254f
       X-Runtime:
-      - '0.005826'
+      - '0.005534'
       Vary:
       - Origin
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"Validation failed: Password can''t be blank, Name can''t
+      string: '{"error":"Validation failed: Password can''t be blank, Name can''t
         be blank, Email can''t be blank"}'
     http_version: 
-  recorded_at: Wed, 13 Dec 2017 23:03:25 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
 recorded_with: VCR 4.0.0

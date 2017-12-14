@@ -25,18 +25,18 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 73eb2381-0c01-439b-84cc-6877e2d8c29b
+      - 71428f20-e37a-4f5d-9b99-5070ed228cb9
       X-Runtime:
-      - '0.002936'
+      - '0.002534'
       Vary:
       - Origin
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"Couldn''t find Group with ''id''=0"}'
+      string: '{"error":"Couldn''t find Group with ''id''=0"}'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 00:23:12 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/groups/0/messages?key=<api_key>
@@ -62,18 +62,18 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 0d486a7d-2a0f-42c3-b635-60629835224c
+      - 4843a712-19c2-424b-a9d3-578d4f9285a4
       X-Runtime:
-      - '0.003543'
+      - '0.002970'
       Vary:
       - Origin
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"Couldn''t find Group with ''id''=0"}'
+      string: '{"error":"Couldn''t find Group with ''id''=0"}'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 00:23:12 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/groups?key=<api_key>
@@ -101,9 +101,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 58be12ac-36ac-4840-bc20-c18c0046b97a
+      - 44d4ed7c-421f-4757-9ed8-8c79effc42e5
       X-Runtime:
-      - '0.005725'
+      - '0.004052'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -128,5 +128,5 @@ http_interactions:
         red blood cells.","created_at":"2017-12-13T22:47:56.366Z","updated_at":"2017-12-13T22:47:56.366Z"},{"id":62,"name":"Caesar''s
         Legion","description":"Revised stratagem: Initiate photonic resonance overcharge.","created_at":"2017-12-13T22:47:56.386Z","updated_at":"2017-12-13T22:47:56.386Z"}]'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 00:23:12 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 recorded_with: VCR 4.0.0

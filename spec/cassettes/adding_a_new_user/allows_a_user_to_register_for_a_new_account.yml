@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8ad4e231330417a3f265252f15513451"
+      - W/"b173a55eaf9c9a736e48e16075e6de9b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 41b4798a-01fa-41fe-80a2-62b006ab5938
+      - d7b3843c-275c-4068-8e86-7265d4818199
       X-Runtime:
-      - '0.101591'
+      - '0.068100'
       Vary:
       - Origin
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"User created successfully.","name":"ED-E","email":"new@vegas.com","key":"26d543b2a9bdfc2ce366f5f20099692a"}'
+      string: '{"message":"User created successfully.","name":"ED-E","email":"new@vegas.com","key":"968072a70d7b4e09e45f2b78518ce783"}'
     http_version: 
-  recorded_at: Wed, 13 Dec 2017 23:50:33 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:11 GMT
 - request:
     method: post
     uri: http://localhost:3001/api/v1/authenticate?email=new@vegas.com&key=<api_key>&password=newvegas
@@ -62,20 +62,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3d8c4363bf9dac2ff89147e55a00f55f"
+      - W/"bb1616d040bb59ae5fb36bb10a760428"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c660b84a-93f2-4782-85f9-931e5ca2ee33
+      - 1f4c4b60-9f54-48b1-9364-68225e9dfc7d
       X-Runtime:
-      - '0.149893'
+      - '0.121248'
       Vary:
       - Origin
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"auth_token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNzcsImV4cCI6MTUxMzI5NTQzNH0.D01goMkp9SXnixadMnILvjNZSIdNR1zBVnJpW07lpT4"}'
+      string: '{"auth_token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOTQsImV4cCI6MTUxMzM2MTU5MX0.DnI6pvg5mlDGp18e91a3v2TorTznEv5rNRQMUaO30po"}'
     http_version: 
-  recorded_at: Wed, 13 Dec 2017 23:50:34 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:11 GMT
 recorded_with: VCR 4.0.0

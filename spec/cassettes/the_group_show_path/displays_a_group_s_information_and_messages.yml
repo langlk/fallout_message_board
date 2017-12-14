@@ -27,9 +27,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ba383b1b-195d-4eec-bdf5-c097a70a1634
+      - 45eb652d-35c6-4d29-9342-4ce80cd3d475
       X-Runtime:
-      - '0.013517'
+      - '0.003869'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -54,7 +54,7 @@ http_interactions:
         red blood cells.","created_at":"2017-12-13T22:47:56.366Z","updated_at":"2017-12-13T22:47:56.366Z"},{"id":62,"name":"Caesar''s
         Legion","description":"Revised stratagem: Initiate photonic resonance overcharge.","created_at":"2017-12-13T22:47:56.386Z","updated_at":"2017-12-13T22:47:56.386Z"}]'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 00:23:12 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/groups/53/?key=<api_key>
@@ -82,9 +82,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d7b79973-c370-451b-ae0d-7a2385f1ef9d
+      - 2a40cfe5-9024-448a-a30b-4f90540c65f7
       X-Runtime:
-      - '0.003638'
+      - '0.002682'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -94,7 +94,7 @@ http_interactions:
       string: '{"id":53,"name":"Talon Company","description":"I''m gonna run some
         diagnostics while you''re tinkering. Take your time.","created_at":"2017-12-13T22:47:56.204Z","updated_at":"2017-12-13T22:47:56.204Z"}'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 00:23:12 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/groups/53/messages?key=<api_key>
@@ -118,13 +118,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"59ef6c4f458c1c756ac494770194eb23"
+      - W/"bd6b945bebf887dfef196d5245da45bd"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 46604814-3c36-430c-ae36-c67a6f1a1e93
+      - 3b4b682d-6026-4c54-9527-76ead018542a
       X-Runtime:
-      - '0.005310'
+      - '0.005858'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -150,8 +150,8 @@ http_interactions:
         Be glad to take...I mean hold some stuff for you.","created_at":"2017-12-13T22:47:56.223Z","updated_at":"2017-12-13T22:47:56.223Z","username":"Sulik"},{"id":529,"user_id":171,"group_id":53,"content":"Strange
         rumors from across the river indicate that a secret underground robot army
         has been destroyed before anyone had a chance to use it.","created_at":"2017-12-13T22:47:56.225Z","updated_at":"2017-12-13T22:47:56.225Z","username":"Joshua
-        Graham"},{"id":620,"user_id":176,"group_id":53,"content":"This is a test post","created_at":"2017-12-13T22:50:42.630Z","updated_at":"2017-12-13T22:50:42.630Z","username":"test"},{"id":621,"user_id":176,"group_id":53,"content":"This
-        is a new message!","created_at":"2017-12-13T22:59:16.326Z","updated_at":"2017-12-13T22:59:16.326Z","username":"test"}]'
+        Graham"},{"id":633,"user_id":195,"group_id":53,"content":"This is a new test
+        message.","created_at":"2017-12-14T18:13:12.140Z","updated_at":"2017-12-14T18:13:12.140Z","username":"Arcade"}]'
     http_version: 
-  recorded_at: Thu, 14 Dec 2017 00:23:12 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:12 GMT
 recorded_with: VCR 4.0.0

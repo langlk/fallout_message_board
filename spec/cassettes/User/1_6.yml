@@ -25,18 +25,18 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 9844fb9b-89c8-4ce6-8dfb-b804c83ac769
+      - fa71eb77-dc4e-47e2-b501-d8caf79acb8c
       X-Runtime:
-      - '0.062879'
+      - '0.061077'
       Vary:
       - Origin
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"Validation failed: Name can''t be blank"}'
+      string: '{"error":"Validation failed: Name can''t be blank"}'
     http_version: 
-  recorded_at: Wed, 13 Dec 2017 23:03:25 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
 - request:
     method: post
     uri: http://localhost:3001/api/v1/users?email=AN%20ARBITRARY%20VALUE&name=&password=password
@@ -62,16 +62,16 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - '07795da2-1173-430d-bf55-551eea9978d6'
+      - fbcce221-1dad-465f-a607-ea43dde8063c
       X-Runtime:
-      - '0.062019'
+      - '0.060346'
       Vary:
       - Origin
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"Validation failed: Name can''t be blank"}'
+      string: '{"error":"Validation failed: Name can''t be blank"}'
     http_version: 
-  recorded_at: Wed, 13 Dec 2017 23:03:25 GMT
+  recorded_at: Thu, 14 Dec 2017 18:13:13 GMT
 recorded_with: VCR 4.0.0
