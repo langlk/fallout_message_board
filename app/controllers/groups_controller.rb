@@ -22,7 +22,7 @@ class GroupsController < ApplicationController
         @messages = []
       end
     else
-      flash[:alert] = "Group not found."
+      flash[:alert] = command.errors[:message]
       redirect_to groups_path
     end
   end

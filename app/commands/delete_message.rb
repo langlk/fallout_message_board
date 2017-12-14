@@ -17,7 +17,7 @@ class DeleteMessage
   rescue RestClient::NotFound => exception
     errors.add(:message, "Group could not be found.")
     nil
-  rescue RestClient::Unauthorized => execute
+  rescue RestClient::Unauthorized => exception
     errors.add(:message, "User authorization failed.")
     nil
   end

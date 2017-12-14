@@ -1,8 +1,9 @@
 <h1>All Groups</h1>
 
 <% if @groups.any? %>
+  <% index = 1 %>
   <% @groups.each do |group| %>
-    <%= link_to "/groups/#{group['id']}" do %>
+    <%= link_to "/groups/#{group['id']}", id: "group-#{index}" do %>
       <div class="card" id="group-<%= group['id'] %>">
         <div class="card-divider">
           <h3><%= group['name'] %></h3>
@@ -11,6 +12,7 @@
           <p><%= group['description'] %></p>
         </div>
       </div>
+      <% index += 1 %>
     <% end %>
   <% end %>
 <% end %>

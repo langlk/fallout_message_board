@@ -1,0 +1,157 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/groups?key=<api_key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin15.6.0 x86_64) ruby/2.4.1p111
+      Host:
+      - localhost:3001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ca201ee4fe294f5f0dbba6ff4f727b5e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ba383b1b-195d-4eec-bdf5-c097a70a1634
+      X-Runtime:
+      - '0.013517'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"id":53,"name":"Talon Company","description":"I''m gonna run some
+        diagnostics while you''re tinkering. Take your time.","created_at":"2017-12-13T22:47:56.204Z","updated_at":"2017-12-13T22:47:56.204Z"},{"id":54,"name":"Brotherhood
+        of Steel","description":"Though dangerous, combat is quite vigorous exercise.","created_at":"2017-12-13T22:47:56.226Z","updated_at":"2017-12-13T22:47:56.226Z"},{"id":55,"name":"Kings","description":"Who
+        do you think actually won the war? No one, I guess.","created_at":"2017-12-13T22:47:56.246Z","updated_at":"2017-12-13T22:47:56.246Z"},{"id":56,"name":"Enclave","description":"The
+        women of New Vegas ask me a lot if there''s a Mrs. New Vegas. Well, of course
+        there is. You''re her. And you''re still as perfect as the day we met.","created_at":"2017-12-13T22:47:56.266Z","updated_at":"2017-12-13T22:47:56.266Z"},{"id":57,"name":"Brotherhood
+        of Steel","description":"If you want to see the fate of democracies, just
+        look out the window","created_at":"2017-12-13T22:47:56.286Z","updated_at":"2017-12-13T22:47:56.286Z"},{"id":58,"name":"United
+        States Armed Forces","description":"You stood up to Elder Maxson for me. I''ll
+        never forget that for as long as I live.","created_at":"2017-12-13T22:47:56.307Z","updated_at":"2017-12-13T22:47:56.307Z"},{"id":59,"name":"Nuka
+        World Triumvirate","description":"We''d move faster if you''d keep your eyes
+        on the road and off me arse.","created_at":"2017-12-13T22:47:56.327Z","updated_at":"2017-12-13T22:47:56.327Z"},{"id":60,"name":"Triggermen","description":"Nothing
+        to impede progress. If you want to see the fate of democracies, look out the
+        windows.","created_at":"2017-12-13T22:47:56.346Z","updated_at":"2017-12-13T22:47:56.346Z"},{"id":61,"name":"Master''s
+        Army","description":"I''m a synth. Synthetic man. All the parts, minus a few
+        red blood cells.","created_at":"2017-12-13T22:47:56.366Z","updated_at":"2017-12-13T22:47:56.366Z"},{"id":62,"name":"Caesar''s
+        Legion","description":"Revised stratagem: Initiate photonic resonance overcharge.","created_at":"2017-12-13T22:47:56.386Z","updated_at":"2017-12-13T22:47:56.386Z"}]'
+    http_version: 
+  recorded_at: Thu, 14 Dec 2017 00:23:12 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/groups/53/?key=<api_key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin15.6.0 x86_64) ruby/2.4.1p111
+      Host:
+      - localhost:3001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e2bf945ffef65f1070f60bc0199fc185"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d7b79973-c370-451b-ae0d-7a2385f1ef9d
+      X-Runtime:
+      - '0.003638'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":53,"name":"Talon Company","description":"I''m gonna run some
+        diagnostics while you''re tinkering. Take your time.","created_at":"2017-12-13T22:47:56.204Z","updated_at":"2017-12-13T22:47:56.204Z"}'
+    http_version: 
+  recorded_at: Thu, 14 Dec 2017 00:23:12 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/groups/53/messages?key=<api_key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin15.6.0 x86_64) ruby/2.4.1p111
+      Host:
+      - localhost:3001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"59ef6c4f458c1c756ac494770194eb23"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 46604814-3c36-430c-ae36-c67a6f1a1e93
+      X-Runtime:
+      - '0.005310'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"id":520,"user_id":174,"group_id":53,"content":"The women of New
+        Vegas ask me a lot if there''s a Mrs. New Vegas. Well, of course there is.
+        You''re her. And you''re still as perfect as the day we met.","created_at":"2017-12-13T22:47:56.207Z","updated_at":"2017-12-13T22:47:56.207Z","username":"Codsworth"},{"id":521,"user_id":164,"group_id":53,"content":"Stimpaks
+        are a marvelous invention, don''t you think?","created_at":"2017-12-13T22:47:56.210Z","updated_at":"2017-12-13T22:47:56.210Z","username":"Lucas
+        Simms"},{"id":522,"user_id":172,"group_id":53,"content":"The women of New
+        Vegas ask me a lot if there''s a Mrs. New Vegas. Well, of course there is.
+        You''re her. And you''re still as perfect as the day we met.","created_at":"2017-12-13T22:47:56.212Z","updated_at":"2017-12-13T22:47:56.212Z","username":"Christine
+        Royce"},{"id":523,"user_id":173,"group_id":53,"content":"The past, the present,
+        and the future walked into a bar. It was tense.","created_at":"2017-12-13T22:47:56.214Z","updated_at":"2017-12-13T22:47:56.214Z","username":"Myron"},{"id":524,"user_id":167,"group_id":53,"content":"If
+        you want to see the fate of democracies, just look out the window","created_at":"2017-12-13T22:47:56.216Z","updated_at":"2017-12-13T22:47:56.216Z","username":"Leslie
+        Ann Bishop"},{"id":525,"user_id":167,"group_id":53,"content":"That means you''re,
+        erm... two centuries late for dinner! Perhaps I could whip you up a snack?
+        You must be famished!","created_at":"2017-12-13T22:47:56.217Z","updated_at":"2017-12-13T22:47:56.217Z","username":"Leslie
+        Ann Bishop"},{"id":526,"user_id":158,"group_id":53,"content":"Nothing to impede
+        progress. If you want to see the fate of democracies, look out the windows.","created_at":"2017-12-13T22:47:56.219Z","updated_at":"2017-12-13T22:47:56.219Z","username":"Paladin
+        Danse"},{"id":527,"user_id":161,"group_id":53,"content":"Ad Victoriam!","created_at":"2017-12-13T22:47:56.221Z","updated_at":"2017-12-13T22:47:56.221Z","username":"DiMA"},{"id":528,"user_id":162,"group_id":53,"content":"Sure.
+        Be glad to take...I mean hold some stuff for you.","created_at":"2017-12-13T22:47:56.223Z","updated_at":"2017-12-13T22:47:56.223Z","username":"Sulik"},{"id":529,"user_id":171,"group_id":53,"content":"Strange
+        rumors from across the river indicate that a secret underground robot army
+        has been destroyed before anyone had a chance to use it.","created_at":"2017-12-13T22:47:56.225Z","updated_at":"2017-12-13T22:47:56.225Z","username":"Joshua
+        Graham"},{"id":620,"user_id":176,"group_id":53,"content":"This is a test post","created_at":"2017-12-13T22:50:42.630Z","updated_at":"2017-12-13T22:50:42.630Z","username":"test"},{"id":621,"user_id":176,"group_id":53,"content":"This
+        is a new message!","created_at":"2017-12-13T22:59:16.326Z","updated_at":"2017-12-13T22:59:16.326Z","username":"test"}]'
+    http_version: 
+  recorded_at: Thu, 14 Dec 2017 00:23:12 GMT
+recorded_with: VCR 4.0.0

@@ -1,0 +1,132 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/groups/0/?key=<api_key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin15.6.0 x86_64) ruby/2.4.1p111
+      Host:
+      - localhost:3001
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 73eb2381-0c01-439b-84cc-6877e2d8c29b
+      X-Runtime:
+      - '0.002936'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Couldn''t find Group with ''id''=0"}'
+    http_version: 
+  recorded_at: Thu, 14 Dec 2017 00:23:12 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/groups/0/messages?key=<api_key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin15.6.0 x86_64) ruby/2.4.1p111
+      Host:
+      - localhost:3001
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 0d486a7d-2a0f-42c3-b635-60629835224c
+      X-Runtime:
+      - '0.003543'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Couldn''t find Group with ''id''=0"}'
+    http_version: 
+  recorded_at: Thu, 14 Dec 2017 00:23:12 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/groups?key=<api_key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin15.6.0 x86_64) ruby/2.4.1p111
+      Host:
+      - localhost:3001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ca201ee4fe294f5f0dbba6ff4f727b5e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 58be12ac-36ac-4840-bc20-c18c0046b97a
+      X-Runtime:
+      - '0.005725'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"id":53,"name":"Talon Company","description":"I''m gonna run some
+        diagnostics while you''re tinkering. Take your time.","created_at":"2017-12-13T22:47:56.204Z","updated_at":"2017-12-13T22:47:56.204Z"},{"id":54,"name":"Brotherhood
+        of Steel","description":"Though dangerous, combat is quite vigorous exercise.","created_at":"2017-12-13T22:47:56.226Z","updated_at":"2017-12-13T22:47:56.226Z"},{"id":55,"name":"Kings","description":"Who
+        do you think actually won the war? No one, I guess.","created_at":"2017-12-13T22:47:56.246Z","updated_at":"2017-12-13T22:47:56.246Z"},{"id":56,"name":"Enclave","description":"The
+        women of New Vegas ask me a lot if there''s a Mrs. New Vegas. Well, of course
+        there is. You''re her. And you''re still as perfect as the day we met.","created_at":"2017-12-13T22:47:56.266Z","updated_at":"2017-12-13T22:47:56.266Z"},{"id":57,"name":"Brotherhood
+        of Steel","description":"If you want to see the fate of democracies, just
+        look out the window","created_at":"2017-12-13T22:47:56.286Z","updated_at":"2017-12-13T22:47:56.286Z"},{"id":58,"name":"United
+        States Armed Forces","description":"You stood up to Elder Maxson for me. I''ll
+        never forget that for as long as I live.","created_at":"2017-12-13T22:47:56.307Z","updated_at":"2017-12-13T22:47:56.307Z"},{"id":59,"name":"Nuka
+        World Triumvirate","description":"We''d move faster if you''d keep your eyes
+        on the road and off me arse.","created_at":"2017-12-13T22:47:56.327Z","updated_at":"2017-12-13T22:47:56.327Z"},{"id":60,"name":"Triggermen","description":"Nothing
+        to impede progress. If you want to see the fate of democracies, look out the
+        windows.","created_at":"2017-12-13T22:47:56.346Z","updated_at":"2017-12-13T22:47:56.346Z"},{"id":61,"name":"Master''s
+        Army","description":"I''m a synth. Synthetic man. All the parts, minus a few
+        red blood cells.","created_at":"2017-12-13T22:47:56.366Z","updated_at":"2017-12-13T22:47:56.366Z"},{"id":62,"name":"Caesar''s
+        Legion","description":"Revised stratagem: Initiate photonic resonance overcharge.","created_at":"2017-12-13T22:47:56.386Z","updated_at":"2017-12-13T22:47:56.386Z"}]'
+    http_version: 
+  recorded_at: Thu, 14 Dec 2017 00:23:12 GMT
+recorded_with: VCR 4.0.0
